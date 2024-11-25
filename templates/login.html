@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* General Body Styling */
+        body {
+            background: url('/static/images/bg.jpg') no-repeat center center fixed;
+            background-size: cover; /* Ensure the background image covers the entire screen */
+            font-family: 'Arial', sans-serif;
+            color: hotpink; /* Set all text to hot pink */
+            font-weight: bold; /* Set all text to bold */
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Ensures the content is centered vertically */
+            align-items: center; /* Centers content horizontally */
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background: rgba(0, 0, 0, 0.5); /* Transparent black */
+            padding: 10px 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .navbar-brand {
+            color: hotpink; /* Set navbar text color to hot pink */
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .navbar-brand:hover {
+            color: #f8c8dc; /* Light pink hover */
+        }
+
+        /* Main Container Styling */
+        .main-container {
+            background: rgba(0, 0, 0, 0.5); /* Transparent black */
+            padding: 30px;
+            border-radius: 15px;
+            width: 80%;
+            max-width: 600px;
+            display: flex;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            z-index: 5; /* Keep it above the footer */
+        }
+
+        /* Divider Styling */
+        .divider {
+            width: 2px;
+            background: #e75480; /* Darker pink */
+            margin: 0 15px;
+        }
+
+        /* Left Section Styling */
+        .left-section {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Right Section Styling */
+        .right-section {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .right-section a {
+            display: block;
+            color: hotpink; /* Set link text color to hot pink */
+            text-decoration: none;
+            font-weight: bold;
+            margin: 10px 0;
+            transition: color 0.3s ease;
+        }
+
+        .right-section a:hover {
+            color: #f8c8dc; /* Light pink hover */
+        }
+
+        /* Form Elements */
+        .form-label {
+            font-weight: bold;
+            color: hotpink; /* Set form label color to hot pink */
+        }
+
+        .form-control {
+            border: 1px solid hotpink; /* Set input border color to hot pink */
+            background: rgba(255, 255, 255, 0.2);
+            color: hotpink; /* Set input text color to hot pink */
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.3);
+            color: black;
+            border-color: hotpink; /* Set border color to hot pink when focused */
+        }
+
+        .btn-primary {
+            background-color: hotpink; /* Hot pink background for buttons */
+            border: none;
+            font-weight: bold;
+        }
+
+        .btn-primary:hover {
+            background-color: black;
+            color: hotpink; /* Change button text to hot pink on hover */
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+            color: hotpink;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            font-weight: bold;
+            position: absolute; /* Make footer fixed at the bottom */
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Styling for h3 elements */
+        h3 {
+            color: hotpink; /* Set h3 text color to black */
+            font-weight: bold; /* Ensure h3 text is bold */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">MiWay Bank</a>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Left Section: Login Form -->
+        <div class="left-section">
+            <h3 class="mb-4">Login to Your Account</h3>
+            <form method="POST">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" id="username" name="username" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+        </div>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Right Section: Links -->
+        <div class="right-section">
+            <a href="/login">Login</a>
+            <a href="/register">Open an Account</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 MiWay Banking App. All rights reserved.</p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
